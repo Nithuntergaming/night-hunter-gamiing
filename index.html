@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Hunter Gaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="#"><img src="logo.png" alt="Night Hunter Gaming Logo"></a>
+    <nav>
+      <a href="#produkte">Produkte</a>
+      <a href="#tastaturen">Tastaturen</a>
+      <a href="#maeuse">Mäuse</a>
+      <a href="#zubehoer">Zubehör</a>
+    </nav>
+    <button class="cart">🛒 Warenkorb <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">NIGHT HUNTER GAMING</p>
+        <h1>Dein Setup.<br><span>Deine Jagd.</span></h1>
+        <p class="heroText">Gaming-Tastaturen, Mäuse und Zubehör für Spieler, die mehr aus ihrem Setup holen wollen.</p>
+        <a class="cta" href="#produkte">SHOP ENTDECKEN</a>
+      </div>
+    </section>
+
+    <section id="produkte" class="products">
+      <div class="sectionTitle">
+        <p>FEATURED GEAR</p>
+        <h2>Gaming Gear</h2>
+      </div>
+
+      <div class="grid">
+        <article class="card" id="tastaturen">
+          <div class="productIcon">⌨️</div>
+          <h3>Night Hunter K70</h3>
+          <p>Mechanische RGB-Gaming-Tastatur</p>
+          <strong>79,99 €</strong>
+          <button onclick="addToCart()">IN DEN WARENKORB</button>
+        </article>
+
+        <article class="card" id="maeuse">
+          <div class="productIcon">🖱️</div>
+          <h3>Night Hunter X1</h3>
+          <p>Ultraleichte Gaming-Maus mit RGB</p>
+          <strong>49,99 €</strong>
+          <button onclick="addToCart()">IN DEN WARENKORB</button>
+        </article>
+
+        <article class="card" id="zubehoer">
+          <div class="productIcon">🎧</div>
+          <h3>Night Hunter H7</h3>
+          <p>Gaming-Headset mit Surround Sound</p>
+          <strong>59,99 €</strong>
+          <button onclick="addToCart()">IN DEN WARENKORB</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="logo.png" alt="Night Hunter Gaming">
+    <p>© 2026 Night Hunter Gaming</p>
+  </footer>
+
+  <script>
+    let count = 0;
+    function addToCart() {
+      count++;
+      document.getElementById("cartCount").textContent = count;
+    }
+  </script>
+</body>
+</html>
